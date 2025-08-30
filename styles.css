@@ -1,0 +1,147 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: #2d3748;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* Navigation Styles */
+.topnav {
+    background: #4a5568;
+    padding: 1rem;
+    text-align: center;
+}
+
+.topnav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.topnav a:hover {
+    color: #63b3ed;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Footer Styles */
+footer {
+    background: #2d3748;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Image and Text Layout Options */
+
+/* Float image to the left of text */
+.img-left {
+    float: left;
+    margin: 0 20px 10px 0;
+    border-radius: 8px;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Float image to the right of text */
+.img-right {
+    float: right;
+    margin: 0 0 10px 20px;
+    border-radius: 8px;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Flexbox container for side-by-side layout */
+.content-flex {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.content-flex img {
+    flex: 0 0 200px;
+    border-radius: 8px;
+    height: auto;
+}
+
+.content-flex .text-content {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Grid layout for more control */
+.content-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.content-grid img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+/* Clearfix for float elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    main {
+        padding: 0.5rem;
+    }
+    nav a {
+        margin: 0 0.5rem;
+    }
+    
+    .img-left, .img-right {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+        max-width: 100%;
+    }
+    
+    .content-flex {
+        flex-direction: column;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
